@@ -39,6 +39,8 @@ def formate_info_and_hide_number(data):
         data[-1] = hidden_number
         new_data = ' '.join(data)
         return new_data
+    else:
+        return ''
 
 
 def get_formatted_data(data):
@@ -52,7 +54,6 @@ def get_formatted_data(data):
         if 'from' in row:
             from_data = formate_info_and_hide_number(data[counter]['from']) + ' -> '
         to_data = formate_info_and_hide_number(data[counter]['to'])
-
 
         formatted_data.append(f"""\
 {date} {description}
